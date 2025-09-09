@@ -1,0 +1,60 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "img": "html.png",
+      "aprendiendo": false,
+      "nivel": "avanzado",
+      "categoria": "frontend"
+    },
+    {
+      "name": "CSS",
+      "img": "css.png", 
+      "aprendiendo": false,
+      "nivel": "avanzado",
+      "categoria": "frontend"
+    },
+    {
+      "name": "JavaScript",
+      "img": "javascript.png",
+      "aprendiendo": false,
+      "nivel": "intermedio",
+      "categoria": "frontend"
+    },
+    {
+      "name": "Sass",
+      "img": "sass.png",
+      "aprendiendo": false,
+      "nivel": "intermedio", 
+      "categoria": "frontend"
+    },
+    {
+      "name": "Bootstrap",
+      "img": "bootstrap.png",
+      "aprendiendo": false,
+      "nivel": "intermedio",
+      "categoria": "frontend"
+    },
+    {
+      "name": "Angular",
+      "img": "angular.png",
+      "aprendiendo": true,
+      "nivel": "principiante",
+      "categoria": "frontend"
+    },
+    {
+      "name": "React",
+      "img": "react.png",
+      "aprendiendo": true,
+      "nivel": "principiante", 
+      "categoria": "frontend"
+    },
+    {
+      "name": "Git",
+      "img": "git.png",
+      "aprendiendo": true,
+      "nivel": "principiante",
+      "categoria": "tools"
+    }
+  ]
+}

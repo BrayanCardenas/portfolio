@@ -1,0 +1,66 @@
+<article class="home"> 
+      <p class="home__p">Hola mi nombre es</p>
+      <h1 class="home__h1">Brayan Cardenas</h1>
+
+      <p class="home__p">
+        Soy <span>Front-end</span> developer.
+      </p>
+
+      <p class="home__p">
+      Mi objetivo profesional es aprovechar mi conocimiento y habilidades adquiridas para desarrollar páginas y aplicaciones innovadoras que ofrezcan una excelente experiencia digital al usuario. Esto es algo que me apasiona y me encanta trabajar para lograrlo.
+      </p>
+    </article>
+
+<style>
+  .home {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    height: 100vh;
+    width: 60em;
+    gap: 0.4em;
+  }
+  .home__h1 {
+    font-size: 5em;
+    font-family: var(--tipo-secundaria);
+    line-height: normal;
+    color: var(--azul);
+  }
+  .home__p {
+    margin: 0.4em 0;
+    font-size: 1.05em;
+  }
+  .home span {
+    font-size: 1.06em;
+    color: var(--azul);
+  }
+
+  @media screen and (max-width: 1280px) {
+    .home {
+      max-width: 40em;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .home {
+      width: 90%;
+    }
+    .home__h1 {
+      font-size: 4.7em;
+    }
+    .home__p {
+      margin: 0em;
+    }
+  }
+  @media screen and (max-width: 415px) {
+    .home__h1 {
+      font-size: 3.9em;
+    }
+  }
+  @media screen and (max-width: 280px) {
+    .home__h1 {
+      font-size: 2.9em;
+    }
+  }
+</style>

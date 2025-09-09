@@ -1,0 +1,47 @@
+---
+import data from "../data/skills.json";
+const { handling } = Astro.props;
+
+const allSkills = data.skills;
+
+let filteredSkills = allSkills;
+
+if (handling === "manejo") {
+  filteredSkills = allSkills.filter((skill) => !skill.aprendiendo);
+} else if (handling === "aprendiendo") {
+  filteredSkills = allSkills.filter((skill) => skill.aprendiendo);
+}
+---
+
+<ul>
+  {
+    filteredSkills.map(({ img, name, aprendiendo, nivel, categoria }) => (
+      <li data-learning={aprendiendo} data-category={categoria}>
+        <img class="img" src={`/img/skills/${img}`} loading="lazy" alt={name} />
+        <span class="skill-name">{name}</span>
+        {/* {nivel && <span class="skill-level">{nivel}</span>} */}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  h2 {
+    font-family: var(--tipo-secundaria);
+  }
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8em;
+  }
+  ul li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    color: var(--azul);
+  }
+</style>

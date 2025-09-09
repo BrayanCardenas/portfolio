@@ -1,0 +1,65 @@
+---
+import SkillsImg from "./SkillsImg.astro";
+---
+
+<section class="skills">
+  <div class="skills__type">
+    <h2>Tecnologías que manejo</h2>
+    <SkillsImg handling="manejo" />
+  </div>
+
+  <div class="skills__type">
+    <h2>Estoy Aprendiendo</h2>
+    <SkillsImg handling="aprendiendo" x />
+  </div>
+</section>
+
+<style>
+  .skills {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    width: 60em;
+    gap: 3em;
+  }
+  .skills__type {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+  }
+  .skills__type h2 {
+    font-family: var(--tipo-secundaria);
+  }
+  .skills ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8em;
+  }
+  .skills ul li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    color: var(--azul);
+  }
+
+  @media screen and (max-width: 1280px) {
+    .skills {
+      max-width: 40em;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .skills {
+      width: 100%;
+    }
+  }
+</style>
