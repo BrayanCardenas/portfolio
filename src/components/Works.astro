@@ -12,7 +12,7 @@ import data from "../data/works.json";
       data.map(({ name, img, url, github }) => (
         <div class="group__work">
           <div class="group__position">
-            <img src={`../../public/img/works/${img}`} loading="lazy" alt={name} />
+            <img src={`/img/works/${img}`} loading="lazy" alt={name} />
             <div class="group__button hover">
               <a href={url} target="_blank" rel="noopener noreferrer">
                 Web
