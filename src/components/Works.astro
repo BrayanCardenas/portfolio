@@ -2,21 +2,25 @@
 import data from "../data/works.json";
 ---
 
-<section class="works">
-  <h2 class="works__title">Todos</h2>
+<section class="works" id="works">
+  <div class="works__types">
+    <h2 class="works__title">Todos</h2>
+  </div>
+
   <div class="works__group scroll">
     {
-      data.map(({ img, name, url, github }) => (
-        <div class="group__position">
-          <img src={`../../public/img/works/${img}`} alt={name} />
-
-          <div class="group__button hover">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              Web
-            </a>
-            <a href={github} target="_blank" rel="noopener noreferrer">
-              Info
-            </a>
+      data.map(({ name, img, url, github }) => (
+        <div class="group__work">
+          <div class="group__position">
+            <img src={`../../public/img/works/${img}`} loading="lazy" alt={name} />
+            <div class="group__button hover">
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                Web
+              </a>
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                Info
+              </a>
+            </div>
           </div>
           <h2 class="group__title">{name}</h2>
         </div>
@@ -54,12 +58,20 @@ import data from "../data/works.json";
     width: 100%;
     overflow-y: scroll;
     gap: 1em;
+    /* height: 28em; */
   }
 
-  .works__group h2 {
+  .group__work h2 {
     font-family: var(--tipo-secundaria);
     font-size: 0.9em;
     padding: 0.5em 0 0 0;
+  }
+  .group__position {
+    position: relative;
+    overflow: hidden;
+  }
+  .group__position:hover .hover {
+    bottom: 0;
   }
   .group__position img {
     width: 19.18em;
@@ -73,6 +85,7 @@ import data from "../data/works.json";
     padding: 1em 0;
     gap: 2em;
     background: rgba(0, 0, 0, 0.8666666667);
+    position: absolute;
   }
   .group__button a {
     padding: 0.7em 2.5em;
