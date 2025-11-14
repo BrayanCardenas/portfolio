@@ -1,29 +1,5 @@
 [
     {
-        "name": "Xbox Web",
-        "img": "xbox.jpg",
-        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
-        "tecnologia": [
-            "HTML",
-            "Scss",
-            "React"
-        ],
-        "url": "https://xbox-bc.vercel.app/",
-        "github": "https://github.com/BrayanCardenas/xbox"
-    },
-    {
-        "name": "3 en Raya",
-        "img": "3-en-raya.jpg",
-        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
-        "tecnologia": [
-            "HTML",
-            "Scss",
-            "React"
-        ],
-        "url": "https://react-juego.vercel.app/",
-        "github": "https://github.com/BrayanCardenas/react-juego"
-    },
-    {
         "name": "Api Pixabay",
         "img": "api-pixabay.jpg",
         "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
@@ -34,18 +10,6 @@
         ],
         "url": "https://brayancardenas.github.io/Pixabay-API/",
         "github": "https://github.com/BrayanCardenas/Pixabay-API"
-    },
-    {
-        "name": "Mundano",
-        "img": "mundano.jpg",
-        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
-        "tecnologia": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "url": "https://brayancardenas.github.io/mundano/",
-        "github": "https://github.com/BrayanCardenas/mundano"
     },
     {
         "name": "Carrito Compras",
@@ -73,15 +37,61 @@
         "github": "https://github.com/BrayanCardenas/Weiddgan"
     },
     {
+        "name": "3 en Raya",
+        "img": "3-en-raya.jpg",
+        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
+        "tecnologia": [
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "url": "https://react-juego.vercel.app/",
+        "github": "https://github.com/BrayanCardenas/react-juego"
+    },
+    {
+        "name": "Xbox Web",
+        "img": "xbox.jpg",
+        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
+        "tecnologia": [
+            "Scss",
+            "React"
+        ],
+        "url": "https://brayancardenas.github.io/xbox",
+        "github": "https://github.com/BrayanCardenas/xbox"
+    },
+    {
+        "name": "Agenda",
+        "img": "agenda.jpg",
+        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
+        "tecnologia": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "url": "https://brayancardenas.github.io/xbox",
+        "github": "https://github.com/BrayanCardenas/xbox"
+    },
+    {
+        "name": "Mundano",
+        "img": "mundano.jpg",
+        "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
+        "tecnologia": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "url": "https://brayancardenas.github.io/mundano",
+        "github": "https://github.com/BrayanCardenas/mundano"
+    },
+    {
         "name": "Cafe",
         "img": "cafe.jpg",
         "description": "Aqui va una descripción del proyecto esto es para rellenar el campo vacio que hay para que se veamas organico y compleo al finalizar el mockup",
         "tecnologia": [
             "HTML",
-            "Sass",
-            "JavaScript"
+            "Sass"
         ],
-        "url": "https://brayancardenas.github.io/Cafe/",
+        "url": "https://brayancardenas.github.io/Cafe",
         "github": "https://github.com/BrayanCardenas/Cafe"
     }
 ]

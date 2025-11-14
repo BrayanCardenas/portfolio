@@ -12,8 +12,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-
-  output: 'server',
-  adapter: netlify(),
+  site: 'https://brayancardenas.github.io',
+  base: '/portfolio/',
+  output: 'static',
   integrations: [react()],
 });
