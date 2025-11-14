@@ -12,7 +12,7 @@ export default function Nav() {
       <div className={`nav ${menu ? "open" : ""}`}>
         <div className="nav__menu">
           <a aria-label="home" href="/home">
-            <img className="menu__logo" src='/img/header/LOGO.svg' loading="lazy" alt="logo" />
+            <img className="menu__logo" src={`${import.meta.env.BASE_URL}img/header/LOGO.svg`} loading="lazy" alt="logo" />
           </a>
           <nav>
             <ul>

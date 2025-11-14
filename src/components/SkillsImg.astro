@@ -17,7 +17,7 @@ if (handling === "manejo") {
   {
     filteredSkills.map(({ img, name, aprendiendo, nivel, categoria }) => (
       <li data-learning={aprendiendo} data-category={categoria}>
-        <img class="img" src={`/img/skills/${img}`} loading="lazy" alt={name} />
+        <img class="img" src={`${import.meta.env.BASE_URL}img/skills/${img}`} loading="lazy" alt={name} />
         <span class="skill-name">{name}</span>
         {/* {nivel && <span class="skill-level">{nivel}</span>} */}
       </li>
