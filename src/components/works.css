@@ -67,15 +67,16 @@
 @media screen and (max-width: 630px) {
   .works {
     width: 100%;
-  }
-  .works__group {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     height: auto;
-    margin-bottom: 2em;
   }
+  /* .works__group { */
+  /*   display: flex; */
+  /*   flex-flow: row wrap; */
+  /*   justify-content: center; */
+  /*   align-items: center; */
+  /*   height: auto; */
+  /*   margin-bottom: 2em; */
+  /* } */
   .works img {
     width: 100%;
     padding: 0 1em;
