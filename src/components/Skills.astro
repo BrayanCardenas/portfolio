@@ -4,13 +4,21 @@ import SkillsImg from "../components/SkillsImg.astro";
 
 <section class="skills" id="skills">
   <div class="skills__type">
-    <h2>Tecnologías que manejo</h2>
-    <SkillsImg handling="manejo" />
+    <div>
+      <h2 class="skills__title">Tecnologías que manejo</h2>
+    </div>    
+    <div class="skills__group">  
+      <SkillsImg handling="manejo" />
+    </div>
   </div>
-
+      
   <div class="skills__type">
-    <h2>Estoy Aprendiendo</h2>
-    <SkillsImg handling="aprendiendo" x />
+    <div>
+      <h2 class="skills__title">Estoy Aprendiendo</h2>
+    </div>
+    <div class="skills__group"> 
+      <SkillsImg handling="aprendiendo" x />
+    </div>  
   </div>
 </section>
 
@@ -22,7 +30,7 @@ import SkillsImg from "../components/SkillsImg.astro";
     align-items: center;
     margin: auto;
     height: 100vh;
-    width: 60em;
+    width: 53em;
     gap: 3em;
   }
   .skills__type {
@@ -31,10 +39,12 @@ import SkillsImg from "../components/SkillsImg.astro";
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1em;
+    gap: 2em;
   }
-  .skills__type h2 {
+  .skills__title {
     font-family: var(--tipo-secundaria);
+    font-size: 1.2em;
+    line-height: normal;
   }
   .skills ul {
     display: flex;
@@ -52,9 +62,9 @@ import SkillsImg from "../components/SkillsImg.astro";
     color: var(--azul);
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1190px) {
     .skills {
-      max-width: 40em;
+      max-width: 50em;
     }
   }
   @media screen and (max-width: 960px) {
