@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./nav.css";
 
-// import pdf from "../assets/document/BrayanCardenas-FrontendDeveloper.pdf";
-
 export default function Nav() {
   const [menu, setMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -68,7 +66,7 @@ export default function Nav() {
           </nav>
           <a
             className="menu__button"
-            // href={pdf}
+            href={`${import.meta.env.BASE_URL}document/CV.pdf`}
             target="_blank"
             rel="noreferrer noopener"
           >
