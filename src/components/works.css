@@ -1,0 +1,107 @@
+.works {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  max-width: 60em;
+  text-align: center;
+}
+.works__types {
+  text-align: center;
+  width: 23em;
+  margin-bottom: 4em;
+}
+.works__title {
+  font-size: 1.2em;
+  font-family: var(--tipo-secundaria);
+  line-height: normal;
+}
+.works__group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1em;
+}
+
+.group__work h2 {
+  font-family: var(--tipo-secundaria);
+  font-size: 0.9em;
+  padding: 0.5em 0 0 0;
+}
+.group__position {
+  position: relative;
+  overflow: hidden;
+}
+.group__position:hover .hover {
+  bottom: 0;
+}
+.group__position img {
+  width: 19.18em;
+}
+.group__button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0;
+  gap: 2em;
+  background: rgba(0, 0, 0, 0.8666666667);
+  position: absolute;
+}
+.group__button a {
+  padding: 0.7em 2.5em;
+  border: 1px var(--blanco) solid;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+.group__button a:hover {
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+@media screen and (max-width: 630px) {
+  .works {
+    width: 100%;
+  }
+  .works__group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-bottom: 2em;
+  }
+  .works img {
+    width: 100%;
+    padding: 0 1em;
+  }
+}
+@media screen and (max-width: 960px) {
+  .works__types {
+    width: 78%;
+    margin: 4em 0 2em;
+  }
+  .works .group__position {
+    position: static;
+  }
+  .works .group__button {
+    background: transparent;
+    position: static;
+    gap: 4em;
+    padding: 0;
+    margin: 1em 0;
+  }
+  .works .group__button a {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .works {
+    max-width: 40em;
+  }
+}
