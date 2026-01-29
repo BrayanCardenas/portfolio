@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   max-width: 60em;
   text-align: center;
 }
@@ -35,13 +36,20 @@
 .group__position {
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 .group__position:hover .hover {
   bottom: 0;
 }
+.group__position:hover img {
+  transform: scale(1.2);
+}
 .group__position img {
   width: 19.18em;
+  transition: transform 0.3s ease;
+  height: 11em;
 }
+
 .group__button {
   display: flex;
   flex-flow: row nowrap;
@@ -52,12 +60,16 @@
   gap: 2em;
   background: rgba(0, 0, 0, 0.8666666667);
   position: absolute;
+  bottom: -100%;
+  transition: bottom 0.3s ease;
+  z-index: 1;
 }
 .group__button a {
   padding: 0.7em 2.5em;
   border: 1px var(--blanco) solid;
   font-size: 0.7em;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .group__button a:hover {
   background: var(--blanco);
@@ -67,24 +79,17 @@
 @media screen and (max-width: 630px) {
   .works {
     width: 100%;
-    height: auto;
+    min-height: auto;
   }
-  /* .works__group { */
-  /*   display: flex; */
-  /*   flex-flow: row wrap; */
-  /*   justify-content: center; */
-  /*   align-items: center; */
-  /*   height: auto; */
-  /*   margin-bottom: 2em; */
-  /* } */
-  .works img {
+  .group__position img {
     width: 100%;
+    height: auto;
     padding: 0 1em;
   }
 }
 @media screen and (max-width: 960px) {
   .works__types {
-    width: 78%;
+    width: 90%;
     margin: 4em 0 2em;
   }
   .works .group__position {
@@ -92,13 +97,17 @@
   }
   .works .group__button {
     background: transparent;
-    position: static;
+    position: relative;
+    bottom: 0;
     gap: 4em;
     padding: 0;
     margin: 1em 0;
   }
   .works .group__button a {
     font-size: 1em;
+  }
+  .group__position:hover img {
+    transform: none;
   }
 }
 @media screen and (max-width: 1280px) {

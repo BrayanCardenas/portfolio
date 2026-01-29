@@ -25,6 +25,7 @@
   color: var(--azul);
   border: 1px var(--azul) solid;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .menu__button:hover {
   background: var(--azul);
@@ -64,6 +65,7 @@
   width: 1.4em;
   fill: var(--blanco);
   margin-bottom: 1em;
+  transition: all 0.3s ease;
 }
 .rrss__rs svg:hover {
   fill: var(--azul);
@@ -75,7 +77,7 @@
     position: fixed;
     inset: 0; /* top:0, right:0, bottom:0, left:0 */
     width: 100%;
-    min-height: 100dvh; /* mejor que 100vh en móviles modernos */
+    min-height: 100dvh; /* mejor para móviles modernos */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,9 +87,9 @@
 
     opacity: 0;
     pointer-events: none;
-    transform: scale(0.95); /* evita encogerse tanto */
+    transform: scale(0.95);
     transition: all 330ms ease-out;
-    z-index: 0.5;
+    z-index: 3;
   }
 
   .nav.open {
@@ -120,7 +122,7 @@
   }
   .hamburger {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     right: 2em;
     bottom: 2em;
     display: flex;
@@ -169,4 +171,3 @@
     transform-origin: right;
   }
 }
-

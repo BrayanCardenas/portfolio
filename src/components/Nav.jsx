@@ -5,23 +5,44 @@ export default function Nav() {
   const [menu, setMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const toggleMenu = () => setMenu(!menu);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setActiveSection(entry.target.id);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0, rootMargin: "-50% 0px -50% 0px" },
+  //   );
+  //
+  //   document.querySelectorAll("section[id]").forEach((section) => {
+  //     observer.observe(section);
+  //   });
+  //
+  //   return () => observer.disconnect();
+  // }, []);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 },
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      let currentSection = "home";
 
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        // Se activa cuando el top de la sección está cerca del top de la pantalla
+        if (rect.top <= 400 && rect.bottom > 400) {
+          currentSection = section.id;
+        }
+      });
 
-    return () => observer.disconnect();
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
