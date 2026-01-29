@@ -25,8 +25,9 @@
     justify-content: center;
     align-items: flex-start;
     margin: auto;
-    height: 100vh;
-    width: 60em;
+    min-height: 100vh;
+    height: auto;
+    max-width: 53em;
     gap: 0.4em;
   }
   .home__h1 {
@@ -44,12 +45,20 @@
     color: var(--azul);
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1190px) {
     .home {
-      max-width: 40em;
-    }
+      max-width: 50em;
+    } 
   }
-  @media screen and (max-width: 960px) {
+
+  @media screen and (max-width: 1100px) {
+    .home {
+      max-width: 45em;
+    } 
+  }
+
+
+  @media screen and (max-width: 1000px) {
     .home {
       width: 90%;
     }
