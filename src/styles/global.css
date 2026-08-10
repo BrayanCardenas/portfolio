@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  --color-negro: #121212;
+  --color-blanco: #ffffff;
+  --color-azul: #00fff0;
+
+  --font-principal: "Karla", sans-serif;
+  --font-secundaria: "Orbitron", sans-serif;
+
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1000px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-2xl: 1190px;
+}
