@@ -22,3 +22,15 @@
   --tipo-principal: var(--font-principal);
   --tipo-secundaria: var(--font-secundaria);
 }
+
+@layer base {
+  body {
+    min-height: 100vh;
+    font-family: var(--font-principal);
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
