@@ -49,7 +49,7 @@ export default function Nav() {
     <>
       <div className={`nav ${menu ? "open" : ""}`}>
         <div className="nav__menu">
-          <a aria-label="home" href="/home">
+          <a aria-label="Ir al inicio" href={`${import.meta.env.BASE_URL}`}>
             <img
               className="menu__logo"
               src={`${import.meta.env.BASE_URL}img/header/LOGO.svg`}
