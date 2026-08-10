@@ -10,8 +10,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://brayancardenas.github.io',
-  base: '/portfolio/',
+  site: 'https://brayancardenas.vercel.app',
+  base: '/',
   output: 'static',
   integrations: [react()],
 });
