@@ -1,82 +1,19 @@
-<section class="home" id="home">
-  <p class="home__p">Hola mi nombre es</p>
-  <h1 class="home__h1">Brayan Cardenas</h1>
+<section id="home" class="flex min-h-screen max-w-[53em] flex-col items-start justify-center gap-[0.4em] m-auto max-[1190px]:max-w-[50em] max-[1100px]:max-w-[45em] max-[1000px]:w-[90%]">
+  <p class="my-[0.4em] text-[1.05em]">Hola mi nombre es</p>
+  <h1 class="font-secundaria text-[5em] leading-none text-azul max-[1000px]:text-[4.7em] max-[415px]:text-[3.9em] max-[280px]:text-[2.9em]">Brayan Cardenas</h1>
 
-  <p class="home__p">
-    Soy <span>Front-end</span> developer.
+  <p class="my-[0.4em] text-[1.05em]">
+    Soy <span class="text-[1.06em] text-azul">Front-end</span> developer.
   </p>
 
-  <p class="home__p">
+  <p class="my-[0.4em] text-[1.05em]">
     Creo experiencias digitales que no solo funcionan,
     sino que también cautivan a los usuarios.
     <br>
-    Soy un desarrollador apasionado por transformar ideas en 
-    soluciones web modernas, combinando código limpio, 
+    Soy un desarrollador apasionado por transformar ideas en
+    soluciones web modernas, combinando código limpio,
     diseño visual y experiencia de usuario intuitiva.
     <br>
     Mi obsesión: código limpio + diseño hermoso + UX excelente
   </p>
 </section>
-
-<style>
-  .home {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin: auto;
-    min-height: 100vh;
-    height: auto;
-    max-width: 53em;
-    gap: 0.4em;
-  }
-  .home__h1 {
-    font-size: 5em;
-    font-family: var(--tipo-secundaria);
-    line-height: normal;
-    color: var(--azul);
-  }
-  .home__p {
-    margin: 0.4em 0;
-    font-size: 1.05em;
-  }
-  .home span {
-    font-size: 1.06em;
-    color: var(--azul);
-  }
-
-  @media screen and (max-width: 1190px) {
-    .home {
-      max-width: 50em;
-    } 
-  }
-
-  @media screen and (max-width: 1100px) {
-    .home {
-      max-width: 45em;
-    } 
-  }
-
-
-  @media screen and (max-width: 1000px) {
-    .home {
-      width: 90%;
-    }
-    .home__h1 {
-      font-size: 4.7em;
-    }
-    .home__p {
-      margin: 0em;
-    }
-  }
-  @media screen and (max-width: 415px) {
-    .home__h1 {
-      font-size: 3.9em;
-    }
-  }
-  @media screen and (max-width: 280px) {
-    .home__h1 {
-      font-size: 2.9em;
-    }
-  }
-</style>
