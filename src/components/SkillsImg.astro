@@ -2,46 +2,27 @@
 import data from "../data/skills.json";
 const { handling } = Astro.props;
 
-const allSkills = data.skills;
-
-let filteredSkills = allSkills;
-
-if (handling === "manejo") {
-  filteredSkills = allSkills.filter((skill) => !skill.aprendiendo);
-} else if (handling === "aprendiendo") {
-  filteredSkills = allSkills.filter((skill) => skill.aprendiendo);
-}
+const filteredSkills = data.skills.filter((skill) =>
+  handling === "aprendiendo" ? skill.aprendiendo : !skill.aprendiendo,
+);
 ---
 
-<ul>
+<ul class="flex flex-row items-center justify-center gap-[1.8em]">
   {
-    filteredSkills.map(({ img, name, aprendiendo, nivel, categoria }) => (
-      <li data-learning={aprendiendo} data-category={categoria}>
-        <img class="img" src={`${import.meta.env.BASE_URL}img/skills/${img}`} loading="lazy" alt={name} />
+    filteredSkills.map(({ img, name, aprendiendo, categoria }) => (
+      <li
+        data-learning={aprendiendo}
+        data-category={categoria}
+        class="flex w-[3.5em] flex-col items-center justify-center text-azul"
+      >
+        <img
+          class="img"
+          src={`${import.meta.env.BASE_URL}img/skills/${img}`}
+          loading="lazy"
+          alt={name}
+        />
         <span class="skill-name">{name}</span>
-        {/* {nivel && <span class="skill-level">{nivel}</span>} */}
       </li>
     ))
   }
 </ul>
-
-<style>
-  h2 {
-    font-family: var(--tipo-secundaria);
-  }
-  ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.8em;
-  }
-  ul li {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 3.5em;
-    color: var(--azul);
-  }
-</style>
