@@ -13,3 +13,12 @@
   --breakpoint-xl: 1100px;
   --breakpoint-2xl: 1190px;
 }
+
+/* Compatibilidad temporal: mapea los nombres viejos a los tokens de Tailwind */
+:root {
+  --negro: var(--color-negro);
+  --blanco: var(--color-blanco);
+  --azul: var(--color-azul);
+  --tipo-principal: var(--font-principal);
+  --tipo-secundaria: var(--font-secundaria);
+}
