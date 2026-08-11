@@ -1,32 +1,50 @@
 ---
 import data from "../data/works.json";
-import "./works.css";
 ---
 
-<section class="works" id="works">
-  <div class="works__types">
-    <h2 class="works__title">Todos</h2>
+<section
+  id="works"
+  class="mx-auto flex min-h-screen max-w-[53em] flex-col items-center justify-center gap-[2em] text-center mb-[1em] max-[1190px]:max-w-[50em] max-[630px]:min-h-0"
+>
+  <div class="max-[960px]:my-[2em] max-[960px]:w-[90%]">
+    <h2 class="font-secundaria text-[1.2em] leading-normal">Todos</h2>
   </div>
 
-  <div class="works__group">
+  <div class="flex w-full flex-wrap items-start justify-center gap-[0.5em]">
     {
       data.map(({ name, img, url, github }) => (
-        <div class="group__work">
-          <div class="group__position">
-            <img src={`${import.meta.env.BASE_URL}img/works/${img}`} loading="lazy" alt={name} />
-            <div class="group__button hover">
-              <a href={url} target="_blank" rel="noopener noreferrer">
+        <div>
+          <div class="group relative overflow-hidden">
+            <img
+              class="h-[9.79em] w-[17.235em] transition-transform duration-300 group-hover:scale-[1.2] max-[630px]:h-auto max-[630px]:w-full max-[630px]:px-[1em] max-[960px]:group-hover:scale-100"
+              src={`${import.meta.env.BASE_URL}img/works/${img}`}
+              loading="lazy"
+              alt={name}
+            />
+            <div
+              class="absolute bottom-[-100%] z-[1] flex w-full items-center justify-center gap-[2em] bg-black/85 py-[1em] transition-[bottom] duration-300 group-hover:bottom-0 max-[960px]:static max-[960px]:my-[1em] max-[960px]:gap-[4em] max-[960px]:bg-transparent max-[960px]:p-0"
+            >
+              <a
+                class="cursor-pointer border border-blanco px-[2.5em] py-[0.7em] text-[0.7em] transition-all duration-300 hover:bg-blanco hover:text-negro max-[960px]:text-[1em]"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Web
               </a>
-              <a href={github} target="_blank" rel="noopener noreferrer">
+              <a
+                class="cursor-pointer border border-blanco px-[2.5em] py-[0.7em] text-[0.7em] transition-all duration-300 hover:bg-blanco hover:text-negro max-[960px]:text-[1em]"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Info
               </a>
             </div>
           </div>
-          <h2 class="group__title">{name}</h2>
+          <h2 class="p-[0.5em] font-secundaria text-[0.9em]">{name}</h2>
         </div>
       ))
     }
   </div>
 </section>
-
