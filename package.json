@@ -10,17 +10,11 @@
     "deploy": "npm run build && echo \"\" > dist/.nojekyll && gh-pages -d dist"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.1",
-    "@tailwindcss/vite": "^4.1.13",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
-    "astro": "^5.13.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.13"
+    "@tailwindcss/vite": "4.1.13",
+    "astro": "5.13.6",
+    "tailwindcss": "4.1.13"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "6.3.0"
   }
 }
-

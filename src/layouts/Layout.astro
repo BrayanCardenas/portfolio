@@ -1,5 +1,5 @@
 ---
-import Nav from "../components/Nav.jsx"
+import Nav from "../components/Nav.astro"
 import "../styles/global.css"
 ---
 
@@ -18,7 +18,7 @@ import "../styles/global.css"
     <meta property="og:url" content="https://brayancardenas.vercel.app" />
   </head>
   <body>
-    <Nav client:load />
+    <Nav />
     <slot />
   </body>
 </html>
