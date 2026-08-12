@@ -1,6 +1,28 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import data from "../data/skills.json";
 const { handling } = Astro.props;
+
+import angular from "../assets/img/skills/angular.png";
+import bootstrap from "../assets/img/skills/bootstrap.png";
+import css from "../assets/img/skills/css.png";
+import git from "../assets/img/skills/git.png";
+import html from "../assets/img/skills/html.png";
+import javascript from "../assets/img/skills/javascript.png";
+import react from "../assets/img/skills/react.png";
+import sass from "../assets/img/skills/sass.png";
+
+const IMAGES: Record<string, ImageMetadata> = {
+  "angular.png": angular,
+  "bootstrap.png": bootstrap,
+  "css.png": css,
+  "git.png": git,
+  "html.png": html,
+  "javascript.png": javascript,
+  "react.png": react,
+  "sass.png": sass,
+};
 
 const filteredSkills = data.skills.filter((skill) =>
   handling === "aprendiendo" ? skill.aprendiendo : !skill.aprendiendo,
@@ -15,11 +37,11 @@ const filteredSkills = data.skills.filter((skill) =>
         data-category={categoria}
         class="flex w-[3.5em] flex-col items-center justify-center text-azul"
       >
-        <img
+        <Image
           class="img"
-          src={`${import.meta.env.BASE_URL}img/skills/${img}`}
-          loading="lazy"
+          src={IMAGES[img]}
           alt={name}
+          loading="lazy"
         />
         <span class="skill-name">{name}</span>
       </li>

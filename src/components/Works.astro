@@ -1,5 +1,27 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import data from "../data/works.json";
+
+import r3EnRaya from "../assets/img/works/3-en-raya.jpg";
+import agenda from "../assets/img/works/agenda.jpg";
+import apiPixabay from "../assets/img/works/api-pixabay.jpg";
+import cafe from "../assets/img/works/cafe.jpg";
+import carritoCompras from "../assets/img/works/carrito-compras.jpg";
+import mundano from "../assets/img/works/mundano.jpg";
+import weiddgan from "../assets/img/works/weiddgan.jpg";
+import xbox from "../assets/img/works/xbox.jpg";
+
+const IMAGES: Record<string, ImageMetadata> = {
+  "3-en-raya.jpg": r3EnRaya,
+  "agenda.jpg": agenda,
+  "api-pixabay.jpg": apiPixabay,
+  "cafe.jpg": cafe,
+  "carrito-compras.jpg": carritoCompras,
+  "mundano.jpg": mundano,
+  "weiddgan.jpg": weiddgan,
+  "xbox.jpg": xbox,
+};
 ---
 
 <section
@@ -15,11 +37,11 @@ import data from "../data/works.json";
       data.map(({ name, img, url, github }) => (
         <div>
           <div class="group relative overflow-hidden">
-            <img
+            <Image
               class="h-[9.79em] w-[17.235em] transition-transform duration-300 group-hover:scale-[1.2] max-[630px]:h-auto max-[630px]:w-full max-[630px]:px-[1em] max-[960px]:group-hover:scale-100"
-              src={`${import.meta.env.BASE_URL}img/works/${img}`}
-              loading="lazy"
+              src={IMAGES[img]}
               alt={name}
+              loading="lazy"
             />
             <div
               class="absolute bottom-[-100%] z-[1] flex w-full items-center justify-center gap-[2em] bg-black/85 py-[1em] transition-[bottom] duration-300 group-hover:bottom-0 max-[960px]:static max-[960px]:my-[1em] max-[960px]:gap-[4em] max-[960px]:bg-transparent max-[960px]:p-0"
