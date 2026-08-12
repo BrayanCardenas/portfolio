@@ -18,8 +18,16 @@ import "../styles/global.css"
     <meta property="og:url" content="https://brayancardenas.vercel.app" />
   </head>
   <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:bg-negro focus:p-4 focus:text-azul"
+    >
+      Saltar al contenido
+    </a>
     <Nav />
-    <slot />
+    <main id="main">
+      <slot />
+    </main>
   </body>
 </html>
 
