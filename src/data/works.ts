@@ -1,0 +1,77 @@
+export interface Project {
+  name: string;
+  img: string;
+  description: string;
+  tecnologia: string[];
+  url: string;
+  github: string;
+}
+
+const works = [
+  {
+    name: "Api Pixabay",
+    img: "api-pixabay.jpg",
+    description: "",
+    tecnologia: ["HTML", "Sass", "JavaScript"],
+    url: "https://brayancardenas.github.io/Pixabay-API/",
+    github: "https://github.com/BrayanCardenas/Pixabay-API",
+  },
+  {
+    name: "Carrito Compras",
+    img: "carrito-compras.jpg",
+    description: "",
+    tecnologia: ["HTML", "CSS", "JavaScript"],
+    url: "https://brayancardenas.github.io/Carrito_Compras/",
+    github: "https://github.com/BrayanCardenas/Carrito_Compras",
+  },
+  {
+    name: "Weiddgan",
+    img: "weiddgan.jpg",
+    description: "",
+    tecnologia: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    url: "https://brayancardenas.github.io/Weiddgan",
+    github: "https://github.com/BrayanCardenas/Weiddgan",
+  },
+  {
+    name: "3 en Raya",
+    img: "3-en-raya.jpg",
+    description: "",
+    tecnologia: ["CSS", "JavaScript", "React"],
+    url: "https://react-juego.vercel.app/",
+    github: "https://github.com/BrayanCardenas/react-juego",
+  },
+  {
+    name: "Xbox Web",
+    img: "xbox.jpg",
+    description: "",
+    tecnologia: ["Scss", "React"],
+    url: "https://brayancardenas.github.io/xbox",
+    github: "https://github.com/BrayanCardenas/xbox",
+  },
+  {
+    name: "Agenda",
+    img: "agenda.jpg",
+    description: "",
+    tecnologia: ["HTML", "CSS", "JavaScript"],
+    url: "https://brayancardenas.github.io/Agenda/",
+    github: "https://github.com/BrayanCardenas/Agenda",
+  },
+  {
+    name: "Mundano",
+    img: "mundano.jpg",
+    description: "",
+    tecnologia: ["HTML", "CSS", "JavaScript"],
+    url: "https://brayancardenas.github.io/mundano",
+    github: "https://github.com/BrayanCardenas/mundano",
+  },
+  {
+    name: "Cafe",
+    img: "cafe.jpg",
+    description: "",
+    tecnologia: ["HTML", "Sass"],
+    url: "https://brayancardenas.github.io/Cafe",
+    github: "https://github.com/BrayanCardenas/Cafe",
+  },
+] satisfies Project[];
+
+export default { works };
