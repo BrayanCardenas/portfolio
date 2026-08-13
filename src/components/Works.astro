@@ -38,13 +38,13 @@ const IMAGES: Record<string, ImageMetadata> = {
         <div>
           <div class="group relative overflow-hidden">
             <Image
-              class="h-[9.79em] w-[17.235em] transition-transform duration-300 group-hover:scale-[1.2] max-[630px]:h-auto max-[630px]:w-full max-[630px]:px-[1em] max-[960px]:group-hover:scale-100"
+              class="h-[9.79em] w-[17.235em] transition-transform duration-300 group-hover:scale-[1.2] group-focus-within:scale-[1.2] max-[630px]:h-auto max-[630px]:w-full max-[630px]:px-[1em] max-[960px]:group-hover:scale-100 max-[960px]:group-focus-within:scale-100"
               src={IMAGES[img]}
               alt={name}
               loading="lazy"
             />
             <div
-              class="absolute bottom-[-100%] z-[1] flex w-full items-center justify-center gap-[2em] bg-black/85 py-[1em] transition-[bottom] duration-300 group-hover:bottom-0 max-[960px]:static max-[960px]:my-[1em] max-[960px]:gap-[4em] max-[960px]:bg-transparent max-[960px]:p-0"
+              class="absolute inset-x-0 bottom-0 z-[1] flex w-full items-center justify-center gap-[2em] bg-black/85 py-[1em] opacity-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:animate-rise group-focus-within:opacity-100 group-focus-within:pointer-events-auto max-[960px]:static max-[960px]:my-[1em] max-[960px]:gap-[4em] max-[960px]:bg-transparent max-[960px]:p-0 max-[960px]:opacity-100 max-[960px]:pointer-events-auto"
             >
               <a
                 class="cursor-pointer border border-blanco px-[2.5em] py-[0.7em] text-[0.7em] transition-all duration-300 hover:bg-blanco hover:text-negro max-[960px]:text-[1em]"
