@@ -31,19 +31,16 @@ const filteredSkills = data.skills.filter((skill) =>
 
 <ul class="flex flex-row items-center justify-center gap-[1.8em]">
   {
-    filteredSkills.map(({ img, name, aprendiendo, categoria }) => (
+    filteredSkills.map(({ img, name }) => (
       <li
-        data-learning={aprendiendo}
-        data-category={categoria}
         class="flex w-[3.5em] flex-col items-center justify-center text-azul"
       >
         <Image
-          class="img"
           src={IMAGES[img]}
           alt={name}
           loading="lazy"
         />
-        <span class="skill-name">{name}</span>
+        <span>{name}</span>
       </li>
     ))
   }
